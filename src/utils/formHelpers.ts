@@ -88,10 +88,15 @@ const validate = (values: IValues) => {
       errors[field] = "Required";
     }
   });
-  errors.preperation_time = isValidTime(values.preparation_time)
-    ? undefined
-    : "Not a valid time format";
-  errors.type = isValidType(values.type) ? undefined : "Not a valid type";
+  errors.name = values.name && values.name.length > 30 ? "Too long" : undefined;
+  errors.type =
+    values.type && (isValidType(values.type) ? undefined : "Not a valid type");
+  errors.preparation_time =
+    values.preparation_time &&
+    (isValidTime(values.preparation_time) &&
+    values.preparation_time.length === 8
+      ? undefined
+      : "Not a valid time format");
 
   return errors;
 };
