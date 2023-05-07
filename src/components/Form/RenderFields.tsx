@@ -74,7 +74,6 @@ const renderSelectField: React.FC<SelectInputProps> = ({
 const renderSliderField: React.FC<TextInputProps> = ({
   input,
   label,
-  type,
   meta: { touched, error, invalid },
   ...custom
 }) => (

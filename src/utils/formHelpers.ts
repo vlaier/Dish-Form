@@ -112,7 +112,7 @@ const submit = async (values: IValues) => {
   if (!response.ok) {
     const data = await response.json();
     const errors: FormErrors<FormStateMap> = {};
-    submitFields.map((field: any) => {
+    submitFields.map((field) => {
       if (data[field]) {
         errors[field] = data[field];
       }

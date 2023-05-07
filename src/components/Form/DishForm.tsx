@@ -14,7 +14,7 @@ import { validate, submit } from "../../utils/formHelpers";
 import { useEffect, useState } from "react";
 import SuccessSnackbar from "../ui/SuccessSnackbar";
 
-interface IDishData {
+export interface IDishData {
   name: string;
   preparation_time: string;
   type: "pizza" | "soup" | "sandwich";
