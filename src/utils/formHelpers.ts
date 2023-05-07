@@ -88,7 +88,6 @@ const validate = (values: IValues) => {
       errors[field] = "Required";
     }
   });
-  errors.name = values.name && values.name.length > 30 ? "Too long" : undefined;
   errors.type =
     values.type && (isValidType(values.type) ? undefined : "Not a valid type");
   errors.preparation_time =
